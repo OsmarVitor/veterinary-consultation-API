@@ -2,15 +2,15 @@ package com.selecao.hapvida.domain.service;
 
 import org.springframework.data.domain.Page;
 
-public interface TutorService<T> {
+public interface GenericService<T> {
 
     Page<T> findAll(int page, int size);
 
     T findById(long id);
 
-    T save(T tutor);
+    T save(T entity);
 
-    T update(T tutorUpdated, long idTutorToUpdate);
+    T update(T entityUpdated, long idEntityToUpdate);
 
     void delete(long id);
 }

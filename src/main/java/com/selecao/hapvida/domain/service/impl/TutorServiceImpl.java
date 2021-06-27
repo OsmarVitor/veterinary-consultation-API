@@ -3,7 +3,7 @@ package com.selecao.hapvida.domain.service.impl;
 import com.selecao.hapvida.domain.exception.EntityNotFoundException;
 import com.selecao.hapvida.domain.model.Tutor;
 import com.selecao.hapvida.domain.repository.TutorRepository;
-import com.selecao.hapvida.domain.service.TutorService;
+import com.selecao.hapvida.domain.service.GenericService;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
@@ -11,7 +11,7 @@ import org.springframework.data.domain.PageRequest;
 import org.springframework.stereotype.Service;
 
 @Service
-public class TutorServiceImpl implements TutorService<Tutor> {
+public class TutorServiceImpl implements GenericService<Tutor> {
 
     @Autowired private TutorRepository tutorRepository;
 
