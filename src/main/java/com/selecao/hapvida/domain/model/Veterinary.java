@@ -5,6 +5,8 @@ import lombok.Setter;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import java.util.List;
@@ -14,7 +16,9 @@ import java.util.List;
 @Entity(name = "veterinary")
 public class Veterinary extends BaseEntity {
 
-  @Id private long id;
+  @Id
+  @GeneratedValue(strategy = GenerationType.AUTO)
+  private long id;
 
   @Column(name = "name", nullable = false)
   private String name;
