@@ -16,22 +16,21 @@ import java.time.LocalDate;
 @Getter
 @Setter
 @Entity(name = "consultation")
-public class Consultation extends BaseEntity{
+public class Consultation extends BaseEntity {
 
-    @Id
-    private long id;
+  @Id private long id;
 
-    @Column(name = "date", nullable = false)
-    private LocalDate date;
+  @Column(name = "date", nullable = false)
+  private LocalDate date;
 
-    @Enumerated(EnumType.STRING)
-    private Status status;
+  @Enumerated(EnumType.STRING)
+  private Status status;
 
-    @ManyToOne
-    @JoinColumn(name="animal_id", nullable = false)
-    private Animal animal;
+  @ManyToOne
+  @JoinColumn(name = "animal_id", nullable = false)
+  private Animal animal;
 
-    @ManyToOne
-    @JoinColumn(name="veterinary_id", nullable = false)
-    private Veterinary veterinary;
+  @ManyToOne
+  @JoinColumn(name = "veterinary_id", nullable = false)
+  private Veterinary veterinary;
 }
