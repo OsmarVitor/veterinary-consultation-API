@@ -1,7 +1,7 @@
 # Veterinary Conultation API! 
 
 
-[![License](https://camo.githubusercontent.com/74c423b91b6157c4920363ddff99e1e1aeee0d83/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f6c6963656e73652d4d49542d726564)](https://github.com/OsmarVitor/github-developers-api/blob/main/LICENSE.txt)    [![Author](http://img.shields.io/badge/made%20by-Osmar%20Perez-red)](https://github.com/OsmarVitor/github-developers-api/blob/main/LICENSE.txt)
+[![License](https://camo.githubusercontent.com/74c423b91b6157c4920363ddff99e1e1aeee0d83/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f6c6963656e73652d4d49542d726564)](https://github.com/OsmarVitor/veterinary-consultation-API/blob/main/LICENSE.txt)    [![Author](http://img.shields.io/badge/made%20by-Osmar%20Perez-red)](https://github.com/OsmarVitor/github-developers-api/blob/main/LICENSE.txt)
 
 #  Projeto
 > O escopo do projeto consiste em desenvolver um serviço web para gerenciamento de consultas veterinárias via API's
@@ -71,7 +71,7 @@ Não é necessário criar um Banco de dados para testes, pois o H2 cria um banco
 * Push a sua branch: `git push origin my-feature`
 
 ### :balance_scale: Licença
-Esse projeto está sob a licença MIT. 
+Esse projeto está sob a licença [MIT](https://github.com/OsmarVitor/veterinary-consultation-API/blob/main/LICENSE.txt). 
 
 ### :star: Bônus
 Gostou do padrão de **commits** e quer saber mais quando usar o `feat`, `refactor`, `fix`, `docs` e etc?
