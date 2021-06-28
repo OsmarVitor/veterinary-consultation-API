@@ -1,5 +1,7 @@
 package com.selecao.hapvida.domain.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -24,11 +26,13 @@ public class Veterinary extends BaseEntity {
   private String name;
 
   @Column(name = "phone_number", nullable = false)
+  @JsonProperty("phone_number")
   private String phoneNumber;
 
   @Column(name = "email", nullable = false)
   private String email;
 
   @OneToMany(mappedBy = "veterinary")
+  @JsonIgnore
   private List<Consultation> consultation;
 }
