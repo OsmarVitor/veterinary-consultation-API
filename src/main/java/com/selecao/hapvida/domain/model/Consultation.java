@@ -1,9 +1,11 @@
 package com.selecao.hapvida.domain.model;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import com.selecao.hapvida.domain.model.enums.Status;
 import lombok.Getter;
 import lombok.Setter;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.EnumType;
@@ -25,16 +27,17 @@ public class Consultation extends BaseEntity {
   private long id;
 
   @Column(name = "date", nullable = false)
+  @JsonFormat(pattern = "dd-MM-yyyy")
   private LocalDate date;
 
   @Enumerated(EnumType.STRING)
   private Status status;
 
-  @ManyToOne
+  @ManyToOne(cascade = CascadeType.MERGE)
   @JoinColumn(name = "animal_id", nullable = false)
   private Animal animal;
 
-  @ManyToOne
+  @ManyToOne(cascade = CascadeType.MERGE)
   @JoinColumn(name = "veterinary_id", nullable = false)
   private Veterinary veterinary;
 }

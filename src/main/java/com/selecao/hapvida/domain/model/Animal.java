@@ -1,6 +1,7 @@
 package com.selecao.hapvida.domain.model;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -40,5 +41,6 @@ public class Animal extends BaseEntity {
   private Tutor tutor;
 
   @OneToMany(mappedBy = "animal")
+  @JsonIgnore
   private List<Consultation> consultations;
 }
