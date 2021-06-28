@@ -35,7 +35,7 @@ public class Animal extends BaseEntity {
   @JsonFormat(pattern = "dd-MM-yyyy")
   private LocalDate date;
 
-  @ManyToOne(cascade = CascadeType.PERSIST)
+  @ManyToOne(cascade = CascadeType.MERGE)
   @JoinColumn(name = "tutor_id", nullable = false)
   private Tutor tutor;
 
