@@ -21,7 +21,7 @@ import java.time.LocalDate;
 public class Consultation extends BaseEntity {
 
   @Id
-  @GeneratedValue(strategy = GenerationType.AUTO)
+  @GeneratedValue(strategy = GenerationType.IDENTITY)
   private long id;
 
   @Column(name = "date", nullable = false)

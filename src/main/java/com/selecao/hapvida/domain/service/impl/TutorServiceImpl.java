@@ -39,8 +39,7 @@ public class TutorServiceImpl implements GenericService<Tutor> {
 
     @Override
     public void delete(long id) {
-        Tutor tutor = findTutor(id);
-        tutorRepository.delete(tutor);
+        tutorRepository.delete(findTutor(id));
     }
 
     private Tutor findTutor(long id) {

@@ -1,5 +1,6 @@
 package com.selecao.hapvida.domain.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Getter;
 import lombok.Setter;
@@ -18,7 +19,7 @@ import java.util.List;
 public class Tutor extends BaseEntity {
 
   @Id
-  @GeneratedValue(strategy = GenerationType.AUTO)
+  @GeneratedValue(strategy = GenerationType.IDENTITY)
   private long id;
 
   @Column(name = "name", nullable = false)
@@ -32,5 +33,6 @@ public class Tutor extends BaseEntity {
   private String email;
 
   @OneToMany(mappedBy = "tutor")
+  @JsonIgnore
   private List<Animal> animals;
 }

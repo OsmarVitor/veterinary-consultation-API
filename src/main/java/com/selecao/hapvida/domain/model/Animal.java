@@ -1,8 +1,10 @@
 package com.selecao.hapvida.domain.model;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import lombok.Getter;
 import lombok.Setter;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -20,7 +22,7 @@ import java.util.List;
 public class Animal extends BaseEntity {
 
   @Id
-  @GeneratedValue(strategy = GenerationType.AUTO)
+  @GeneratedValue(strategy = GenerationType.IDENTITY)
   private long id;
 
   @Column(name = "name", nullable = false)
@@ -30,9 +32,10 @@ public class Animal extends BaseEntity {
   private String breed;
 
   @Column(name = "date", nullable = false)
+  @JsonFormat(pattern = "dd-MM-yyyy")
   private LocalDate date;
 
-  @ManyToOne
+  @ManyToOne(cascade = CascadeType.PERSIST)
   @JoinColumn(name = "tutor_id", nullable = false)
   private Tutor tutor;
 
