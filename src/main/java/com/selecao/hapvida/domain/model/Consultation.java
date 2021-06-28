@@ -2,7 +2,6 @@ package com.selecao.hapvida.domain.model;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.selecao.hapvida.domain.model.enums.Status;
-import lombok.Builder;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -21,7 +20,6 @@ import java.time.LocalDate;
 @Getter
 @Setter
 @Entity(name = "consultation")
-@Builder(builderMethodName = "newBuilder")
 public class Consultation extends BaseEntity {
 
   @Id
