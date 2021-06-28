@@ -2,6 +2,7 @@ package com.selecao.hapvida.domain.model;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import lombok.Builder;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -20,6 +21,7 @@ import java.util.List;
 @Getter
 @Setter
 @Entity(name = "animal")
+@Builder(builderMethodName = "newBuilder")
 public class Animal extends BaseEntity {
 
   @Id

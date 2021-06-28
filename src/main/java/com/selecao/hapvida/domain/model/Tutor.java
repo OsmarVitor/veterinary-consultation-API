@@ -2,6 +2,7 @@ package com.selecao.hapvida.domain.model;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import lombok.Builder;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -16,6 +17,7 @@ import java.util.List;
 @Getter
 @Setter
 @Entity(name = "tutor")
+@Builder(builderMethodName = "newBuilder")
 public class Tutor extends BaseEntity {
 
   @Id
