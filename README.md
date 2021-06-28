@@ -54,9 +54,10 @@ docker run --name some-postgres -e POSTGRES_PASSWORD=postgres -d postgres
 ## :heavy_check_mark: Step 3
 Com o Java 11 e o Postgres instalado precisamos criar o banco de dados com o nome `hapvida` que o projeto usa para o desenvolvimento.
 Você pode criar manualmente com alguma ferramenta (Recomendo o [DBeaver](https://dbeaver.io/)). 
-````
+
 
 Feito isso, é só importar o projeto para a sua IDE favorita e testar! 
+
 
 # Curiosidades
 
